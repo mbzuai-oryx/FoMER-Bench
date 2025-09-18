@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<meta property='og:title' content='How Good are Foundation Models in Step-by-Step Embodied Reasoning?'/>
+<meta property='og:image' content=''/>
+<meta property='og:description' content=''/>
+<meta property='og:url' content='https://github.com/mbzuai-oryx/ALM-Bench'/>
+<meta property='og:image:width' content='1200' />
+<meta property='og:image:height' content='663' />
+<!-- TYPE BELOW IS PROBABLY: 'website' or 'article' or look on https://ogp.me/#types -->
+<meta property="og:type" content='website'/>
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9VZKE74FPW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-9VZKE74FPW');
+</script>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="How Good are Foundation Models in Step-by-Step Embodied Reasoning?">
+  <meta name="keywords" content="Multilingual Multimodal Benchmark, 100 languages, Cultural Multilingual Benchmark">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How Good are Foundation Models in Step-by-Step Embodied Reasoning?</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/tab_gallery.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+  <link rel="stylesheet" href="juxtapose/css/juxtapose.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <script src="./static/js/magnifier.js"></script>
+  <link href="https://fonts.cdnfonts.com/css/menlo" rel="stylesheet">
+  <link rel="stylesheet" href="./static/css/image_card_fader.css">
+  <link rel="stylesheet" href="./static/css/image_card_slider.css">
+
+</head>
+
+<style>
+  @import url('https://fonts.cdnfonts.com/css/menlo');
+</style>
+
+
+<body>
+  <section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-2 publication-title">How Good are Foundation Models in Step-by-Step Embodied Reasoning?</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><a href="https://dinuransika.github.io/">Dinura Dissanayake</a><sup>1♠</sup>,</span>
+            <span class="author-block"><a href="">Ahmed Heakl</a><sup>1♠</sup>,</span>
+            <span class="author-block"><a href="">Noor Ahsan</a><sup>1♠</sup>,</span>
+            <span class="author-block"><a href="">Jean Lahoud</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="">Ketan More</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="">Ritesh Thawkar </a><sup>1</sup>,</span>
+            <span class="author-block"><a href="">Omkar Thawakar</a><sup>1</sup>,</span>
+
+
+                
+            <!-- <br> -->
+              
+            <span class="author-block"><a href="https://scholar.google.com/citations?hl=en&user=bZ3YBRcAAAAJ">Hisham Cholakkal</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="https://scholar.google.com/citations?user=-9ifK0cAAAAJ&hl=en&oi=ao">Ivan Laptev</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="https://salman-h-khan.github.io/">Salman Khan</a><sup>1,2</sup>,</span>
+            <span class="author-block"><a href="https://sites.google.com/view/fahadkhans/home">Fahad Shahbaz Khan</a><sup>1,3</sup></span>
+
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>♠</sup> Core Authors</span>
+            <br>
+            <span class="author-block"><sup>1</sup>Mohamed bin Zayed University of AI,</span>
+                <br>
+            <span class="author-block"><sup>2</sup>Australian National University,</span>
+            <span class="author-block"><sup>3</sup>Linkoping University,</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2411.16508"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+                                </span>
+                <span class="link-block">
+                  <a href="https://huggingface.co/datasets/MBZUAI/ALM-Bench" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-database"></i>
+                    </span>
+                    <span>Dataset</span>
+                  </a>
+                </span>
+              <span class="link-block">
+                <a href="https://github.com/mbzuai-oryx/ALM-Bench"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+
+              <span class="link-block">
+                <a href="https://drive.google.com/file/d/1B2yynH-o1z1UvMCl32XoY3pVIkAxgN0P/view?usp=sharing"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-image"></i>
+                  </span>
+                  <span>Poster</span>
+                </a>
+              </span>
+
+
+              <span class="link-block">
+                <a href="https://docs.google.com/presentation/d/10lUrfoC-R1lgl0Dx0EYpx1ID3AqLGnRO/edit?usp=sharing&ouid=103839181464334047856&rtpof=true&sd=true"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-chalkboard"></i>
+                  </span>
+                  <span>Presentation</span>
+                </a>
+              </span>
+
+              <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=fvcX4yi5AiY&list=PLtIMlmzwbtty7ie1quj1fq2QoTRK9eWHX&ab_channel=AshmalVayani"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-video"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+
+
+              <span class="link-block">
+                <a href="#bibtex"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-obp"></i>
+                  </span>
+                  <span>BibTex</span>
+                </a>
+              </span>
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+        <p align="justify"> 
+        <b>How can AI-powered agents make safe and intelligent choices in the real world?</b> <br> Our research introduces a large-scale benchmark that tests whether today’s large multimodal models (LMMs) can truly reason about space, safety, and context when acting in complex environments. With over 1,000 carefully designed scenarios and a new evaluation framework, we reveal both the promise and the limitations of current models, pointing the way toward more reliable, reasoning-aware embodied AI.</p>
+    <br>
+    <img src="./static/images/ReasoningTrailExample.jpg" >
+        <div class="content has-text-justified">
+            <p align="justify"> <b> <span>Figure</span></b>: The given sample shows an example where both the models, Gemini and Qwen, have given the correct answer as ”withdraw bolt”. Even though the answers are correct, the reasoning given for the answers is completely different. This emphasizes the need to
+evaluate the reasoning capabilities of the models.</p>
+        </div>
+    </div>
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop has-text-centered">
+                 <!-- Visual Effects. -->
+      <h2 class="title is-3">Abstract</h2>
+      <div class="content has-text-justified">
+        <p>
+          Embodied agents operating in the physical world must make decisions that are not only effective but also safe, spatially coherent, and grounded in context. While recent advances in large multimodal models (LMMs) have shown promising capabilities in visual understanding and language generation, their ability to perform structured reasoning for real-world embodied tasks remains underexplored. In this work, we introduce a benchmark designed to evaluate the reasoning capabilities of LMMs in complex embodied decision-making scenarios. Our benchmark spans a diverse set of tasks that require agents to interpret multimodal observations, reason about physical constraints and safety, and generate valid next actions in natural language. We present (i) a large-scale, curated suite of embodied reasoning tasks, (ii) a novel evaluation framework that disentangles perceptual grounding from action reasoning, and (iii) empirical analysis of several leading LMMs under this setting. Our results highlight both the potential and current limitations of LMMs in embodied reasoning, pointing towards key challenges and opportunities for future research in robot intelligence.        </p>
+      </div>
+    </div>
+  </div>
+
+
+</section>
+    <div class="column">
+        <div style="text-align:center;" >
+            <!-- <h4 class="subtitle has-text-centered"> -->
+              <br><br><br>
+            <img src="./static/images/Table1_Benchmark_Comparison.jpeg">
+            <!-- </h4> -->
+            
+            <div class="content has-text-justified">
+                <p align="center"> <b> <span>Table</span></b>  A comparison of various Embodied and Physical AI benchmarks.</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    
+  </div>
+
+</section>
+
+<!-- <section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop has-text-centered">
+                 --> <!-- Visual Effects. -->
+           <!--         
+      <h2 class="title is-3">Abstract</h2>
+      <div class="content has-text-justified">
+        <p>
+          Embodied agents operating in the physical world must make decisions that are not only effective but also safe, spatially coherent, and grounded in context. While recent advances in large multimodal models (LMMs) have shown promising capabilities in visual understanding and language generation, their ability to perform structured reasoning for real-world embodied tasks remains underexplored. In this work, we introduce a benchmark designed to evaluate the reasoning capabilities of LMMs in complex embodied decision-making scenarios. Our benchmark spans a diverse set of tasks that require agents to interpret multimodal observations, reason about physical constraints and safety, and generate valid next actions in natural language. We present (i) a large-scale, curated suite of embodied reasoning tasks, (ii) a novel evaluation framework that disentangles perceptual grounding from action reasoning, and (iii) empirical analysis of several leading LMMs under this setting. Our results highlight both the potential and current limitations of LMMs in embodied reasoning, pointing towards key challenges and opportunities for future research in robot intelligence.        </p>
+      </div>
+    </div>
+  </div>
+
+
+</section>-->
+
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3"> </h2>
+        <div class="content has-text-justified">
+          <p>
+          <h5> <b> Benchmark Curation: Building the Embodied Bench</b></h5>
+           <p>The Embodied Bench is designed to evaluate reasoning in physical AI scenarios. It covers multiple robot types and modalities, allowing assessment of capabilities across tasks such as <b>Next-Action prediction, Action affordance, Physical common sense, Temporal reasoning, Tool use and manipulation, Risk assessment, and Robot Navigation</b></p>
+           <ul>
+             <li> <b>Benchmark Assembly </b> To capture the full scope of physical reasoning, this benchmark was curated from multiple existing datasets. Some datasets (e.g., Cosmos-R1, Pbench) already contained QA pairs, while others required generation of QA pairs and reasoning trails through a semi-automated pipeline. For datasets with existing QA pairs, reasoning trails were added to link each answer to logical, step-by-step explanations.</li>
+            <li><b>QA and Reasoning Trail Generation </b> This benchmark is constructed using a structured pipeline with<b> Qwen2.5-VL-32B-Instruct.</b>First, the model identifies all visible objects, dynamic elements, and interactions in each scenario. Based on this context, it generates <b>QA pairs with chain-of-thought reasoning,</b> targeting skills such as physical common sense, spatial and temporal </li>
+            <li><b>Manual Verification  </b>To ensure quality, all generated QA pairs and reasoning trails were manually verified. Volunteers checked that questions are relevant, physically plausible, and aligned with intended task categories. Reasoning trails were refined by adding or removing steps, and trivial or misaligned questions were removed.</li>
+            <li><b>Task Ontology  </b> For detailed evaluation, questions are categorized into <b>eleven task types:</b> Task completion verification, Next-action prediction, Action affordance, Physical common sense, Robot-centric reasoning, Temporal reasoning, Tool use and manipulation, Social navigation, Human-robot object interaction, and Risk assessment.</li>
+          
+           </ul>
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+  </div>
+</section>
+
+<section class="section">
+  
+    <!--/ Matting. -->
+    <div class="container is-max-desktop">
+    
+    <!-- Latent space editing applications -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3 has-text-centered">Benchmark Datasets Overview</h2>
+        
+        <div class="content has-text-centered">
+            <img src="./static/images/Fig3_Data_Distribution.jpg"  style="max-width:50%">
+                                  <p class="content has-text-justified">
+            <b>Figure:</b> The figure illustrates both the dataset distribution and the question type composition of our benchmark. For clarity, we further decompose the Cosmos-R1 benchmark into its constituent sub-datasets – Agibot, BridgeDataV2, HoloAssist, RoboVQA, and RoboFail to explicitly show the distribution od question types across these subsets.</p>
+        </div>
+        <div class="content has-text-justified">
+                      <p>
+         <style>
+            .two-column-list {
+                column-count: 2;
+                column-gap: 0px;
+                list-style: decimal;
+                padding: 0;
+                margin: 0;
+            }
+            .two-column-list li {
+                margin-bottom: -5px;
+            }
+            .two-column-list-container {
+                padding: 0;
+                margin: 0;
+            }
+        </style>
+        
+       
+
+        </div>
+
+      </div>
+    </div>
+
+            <!--/ Matting. -->
+    <div class="container is-max-desktop">
+
+    <!-- Latent space editing applications -->
+   <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3 has-text-centered"> </h2>
+          <br>
+        <div class="content has-text-centered">
+            <img src="./static/images/Fig4_grouped_panels.jpg"  style="max-width:100%">
+                                  <p class="content has-text-justified">
+
+            <div class="content has-text-justified">
+            <p align="center"> <b> <span>Figure</span></b>: A comprehensive comparison of dataset-wise performances of the models. In our benchmark we have data from different sources, such as Cosmos-R1 benchmark, Roboset, NYU VINN, Recon, HRIBench and Pbench. For this graph we have decomposed Cosmos-R1 into its subsets, Agibot, BridgeDataV2, HoloAssist, RoboVQA, and Robofail.</p>
+            </div>
+<br><br><br><br><br><br>
+        <div class="content has-text-justified">
+            <h3 class="title is-4 has-text-justified"><b>Data Statistics</b></h3>
+    
+            <p align="justify"> Our benchmark includes three different question types: multiple-choice (MCQ), true/false (TF), and open-ended. For MCQ and TF questions, models were provided with the visual context, question, and options, and were instructed to give an answer selected from the options along with a detailed step-by-step explanation that logically leads to the final answer. Open-ended questions were prompted with the visual context and question, and models were asked to provide a detailed explanation with the final answer. Since different models vary in their ability to handle visual frames, and most videos in our benchmark are short (1–10 seconds), we prompted all models with 8 uniformly sampled frames from each video. The only exception is the Robofail subset from Cosmos-R1, which includes longer videos (3–5 minutes); for these, we sampled 32 uniformly spaced frames. For datasets like NYU VINN, Recon, and Roboset that consist of static image frames, we used 8 sampled images. In the case of Pbench and HRIBench, which have only one image, models were prompted with that single image.</p>
+            <div class="content has-text-centered">
+            <img src="./static/images/Fig5_QTypeWise.jpg" style="max-width:90%"> </div>
+            <p align="center"> <b> <span>Figure</span></b>: Comparison of the final accuracies achieved by different models in each question type of the benchmark. Considering the results, models perform better on TF questions and open-ended questions compared to MCQ questions</p>
+        </div>
+
+<br><br><br>
+        <div class="content has-text-justified">
+            <div class="content has-text-centered">
+            <img src="./static/images/fig7_Embodied Results.jpg" style="max-width:100%"> </div>
+            <p align="center"> <b> <span>Figure</span></b>:  The above bar chart compares the performance of different open source as well as closed source SoTA models, highlighting the reasoning accuracy as well as the final accuracy. Here, we evaluate the reasoning steps thoroughly using our proposed evaluation criteria.</p>
+        </div>
+        </div>
+          
+      </div>
+    </div>
+
+    <br><br>
+
+    <div class="columns is-centered">
+      <div class="column is-full-width has-text-centered">
+        <h2 class="title is-3"></h2>
+
+        <div class="content has-text-justified">
+        <p> </p>
+        </div>
+
+                <h3 class="title is-4 has-text-justified">Performance of Open- and Closed-Source LMMs on our Benchmark</h3>
+
+        <div class="content has-text-centered">
+                      <p style="text-align: justify;">
+<p style="text-align: justify;"> Here we show a breakdown of the model performance on the proposed evaluation criteria, where we evaluate the reasoning
+traces of the models in physical AI-specific criteria like spatial reasoning, physical causality, commonsense, and safety </p>
+
+<img src="./static/images/Fig6_ReasoningRadar.jpg"  style="max-width:100%">
+
+    </div>
+    <br/>
+    </div>
+ </div>
+</div>
+
+            <h3 class="title is-4 has-text-justified">Performance Analyzation </h3>
+                <div class="content has-text-justified">
+            <p>
+              Performance comparison of GPT-O4-mini and CosmosR1 on different categories of our benchmark
+            </p>
+            
+            
+            <div class="content has-text-centered">
+                <img src="./static/images/Fig8_CategoryWise.jpg" style="max-width:90%">
+            </div>
+            <br>
+
+          
+            <br>
+
+        <div class="content has-text-centered">
+                <img src="./static/images/Table5.jpeg" style="max-width:55%" align="center">
+               <div class="content has-text-centered"> <p>We evaluated our models using GPT-4o as well as
+Qwen3-32B, and both models give similar evaluations in final accuracy as well as reasoning accuracy</p>
+            </div></div>
+
+
+
+        <h3 class="title is-4 has-text-justified">Conclusion</h3>
+        <div class="content has-text-justified">
+          <p>
+           In this paper, we introduced a novel embodied VQA benchmark designed to evaluate the embodied reasoning capabilities of LLMs. The benchmark consists of over 1,000 samples spanning 10 diverse task categories. In addition, we proposed a new evaluation framework that jointly assesses both action validity and reasoning correctness. We analyzed the performance of nine state-of-the-art models, including both open-source and proprietary systems. Our results reveal significant limitations of current models on embodied reasoning tasks and underscore the importance of analyzing and evaluating reasoning trails to better understand model capabilities.</p>
+
+            <br>
+            <p>For additional details about evaluation and experimental results, please refer to our main paper. Thank you! </p>
+        </div>
+
+</section>
+
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title"><a id="bibtex">BibTeX</a></h2>
+    <pre><code>@misc{vayani2024alm,
+      title={How Good are Foundation Models in Step-by-Step Embodied Reasoning?}, 
+      author={Dinura Dissanayake and Noor Ahsan and Ahmed Heakl and Jean Lahoud and Ketan More and Ritesh Thawkar and Omkar Thawakar and Ivan Laptev and Mubarak Shah and Salman Khan and Fahad Khan},
+      year={2025},
+      eprint={2411.16508},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2411.16508}, 
+}
+</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            Website adapted from the following <a href="https://mingukkang.github.io/GigaGAN/">source code</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<script src="juxtapose/js/juxtapose.js"></script>
+
+<script>
+var slider;
+let origOptions = {
+    "makeResponsive": true,
+    "showLabels": true,
+    "mode": "horizontal",
+    "showCredits": true,
+    "animate": true,
+    "startingPosition": "50"
+};
+
+const juxtaposeSelector = "#juxtapose-embed";
+const transientSelector = "#juxtapose-hidden";
+
+  inputImage.src = "./static/images/".concat(name, "_input.jpg")
+  outputImage.src = "./static/images/".concat(name, "_output.jpg")
+
+  let images = [inputImage, outputImage];
+  let options = slider.options;
+  options.callback = function(obj) {
+      var newNode = document.getElementById(obj.selector.substring(1));
+      var oldNode = document.getElementById(juxtaposeSelector.substring(1));
+      console.log(obj.selector.substring(1));
+      console.log(newNode.children[0]);
+      oldNode.replaceChild(newNode.children[0], oldNode.children[0]);
+      //newNode.removeChild(newNode.children[0]);
+      
+  };
+  
+  slider = new juxtapose.JXSlider(transientSelector, images, options);
+
+
+
+
+(function() {
+    slider = new juxtapose.JXSlider(
+        juxtaposeSelector, origImages, origOptions);
+    //document.getElementById("left-button").onclick = replaceLeft;
+    //document.getElementById("right-button").onclick = replaceRight;
+})();
+  // Get the image text
+  var imgText = document.getElementById("imgtext");
+  // Use the same src in the expanded image as the image being clicked on from the grid
+  // expandImg.src = imgs.src;
+  // Use the value of the alt attribute of the clickable image as text inside the expanded image
+  imgText.innerHTML = name;
+  // Show the container element (hidden with CSS)
+  // expandImg.parentElement.style.display = "block";
+
+$(".flip-card").click(function() {
+            console.log("fading in")
+            div_back = $(this).children().children()[1]
+            div_front = $(this).children().children()[0]
+            // console.log($(this).children("div.flip-card-back"))
+            console.log(div_back)
+            $(div_front).addClass("out");
+            $(div_front).removeClass("in");
+
+            $(div_back).addClass("in");
+            $(div_back).removeClass("out");
+
+});
+
+$(".flip-card").mouseleave(function() {
+            console.log("fading in")
+            div_back = $(this).children().children()[1]
+            div_front = $(this).children().children()[0]
+            // console.log($(this).children("div.flip-card-back"))
+            console.log(div_back)
+            $(div_front).addClass("in");
+            $(div_front).removeClass("out");
+
+            $(div_back).addClass("out");
+            $(div_back).removeClass("in");
+
+});
+
+</script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>    
+
+</body>
+</html>
