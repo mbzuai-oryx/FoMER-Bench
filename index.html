@@ -185,8 +185,7 @@
             <p align="justify"> <b> <span>Figure</span></b>: Example illustrating the final answer and step-by-step
             reasoning from Gemini and Qwen for a given
             video and text prompt. While both models correctly identify the
-            action as â€œwithdraw bolt,â€ the reasoning they provide differs sig-
-            nificantly. This underscores the importance of evaluating the final
+            action as withdraw bolt, the reasoning they provide differs significantly. This underscores the importance of evaluating the final
             answer as well as the underlying reasoning.</p>
         </div>
     </div>
@@ -324,27 +323,28 @@ distribution of question types across these subsets.</p>
         <h2 class="title is-3 has-text-centered"> </h2>
           <br>
         <div class="content has-text-centered">
-            <img src="./static/images/Fig4_grouped_panels.png"  style="max-width:100%">
+            <!-- <img src="./static/images/Fig4_grouped_panels.png"  style="max-width:100%">
                                   <p class="content has-text-justified">
 
             <div class="content has-text-justified">
             <p align="center"> <b> <span>Figure</span></b>: Comparison of reasoning accuracy (RA) and final accuracy (FA) across datasets of our benchmark, including Cosmos-R1
 (decomposed into Agibot, BridgeDataV2, HoloAssist, RoboVQA, and RoboFail), RoboSet, NYU VINN, Recon, HRIBench, and Pbench.</p>
-            </div>
-<br><br><br><br><br><br>
-        <div class="content has-text-justified">
+            </div> -->
+<!-- <br><br><br><br><br><br> -->
+        <!-- <div class="content has-text-justified">
+
             <h3 class="title is-4 has-text-justified"><b>Data Statistics</b></h3>
     
-            <p align="justify"> Our benchmark includes three different question types: multiple-choice (MCQ), true/false (TF), and open-ended. For MCQ and TF questions, models were provided with the visual context, question, and options, and were instructed to give an answer selected from the options along with a detailed step-by-step explanation that logically leads to the final answer. Open-ended questions were prompted with the visual context and question, and models were asked to provide a detailed explanation with the final answer. Since different models vary in their ability to handle visual frames, and most videos in our benchmark are short (1â€“10 seconds), we prompted all models with 8 uniformly sampled frames from each video. The only exception is the Robofail subset from Cosmos-R1, which includes longer videos (3â€“5 minutes); for these, we sampled 32 uniformly spaced frames. For datasets like NYU VINN, Recon, and Roboset that consist of static image frames, we used 8 sampled images. In the case of Pbench and HRIBench, which have only one image, models were prompted with that single image.</p>
+            <p align="justify"> Our benchmark includes three different question types: multiple-choice (MCQ), true/false (TF), and open-ended. For MCQ and TF questions, models were provided with the visual context, question, and options, and were instructed to give an answer selected from the options along with a detailed step-by-step explanation that logically leads to the final answer. Open-ended questions were prompted with the visual context and question, and models were asked to provide a detailed explanation with the final answer. Since different models vary in their ability to handle visual frames, and most videos in our benchmark are short (1-10 seconds), we prompted all models with 8 uniformly sampled frames from each video. The only exception is the Robofail subset from Cosmos-R1, which includes longer videos (3-5 minutes); for these, we sampled 32 uniformly spaced frames. For datasets like NYU VINN, Recon, and Roboset that consist of static image frames, we used 8 sampled images. In the case of Pbench and HRIBench, which have only one image, models were prompted with that single image.</p>
             <div class="content has-text-centered">
             <img src="./static/images/Fig5_QTypeWise.jpg" style="max-width:90%"> </div>
             <p align="center"> <b> <span>Figure</span></b>: Comparison of the final accuracies achieved by different
 models in each question type of the benchmark. Considering the
 results, models perform better on TF questions and open-ended
 questions compared to MCQ questions.</p>
-        </div>
+        </div> -->
 
-<br><br><br>
+<!-- <br><br><br> -->
         <div class="content has-text-justified">
             <div class="content has-text-centered">
             <img src="./static/images/fig7_Embodied Results.png" style="max-width:100%"> </div>
@@ -370,7 +370,7 @@ using our proposed evaluation criteria.</p>
 
                 <h3 class="title is-4 has-text-justified">Performance of Open- and Closed-Source LMMs on our Benchmark</h3>
 
-        <div class="content has-text-centered">
+        <!-- <div class="content has-text-centered">
                       <p style="text-align: justify;">
 <p style="text-align: justify;">  breakdown of the model performance on the proposed
 evaluation criteria, where we evaluate the reasoning traces of the
@@ -378,7 +378,7 @@ models in physical AI-specific criteria like spatial reasoning, physical causali
 
 <img src="./static/images/Fig6_ReasoningRadar.png"  style="max-width:100%">
 
-    </div>
+    </div> -->
     <br/>
     </div>
  </div>
