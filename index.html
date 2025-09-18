@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -6,25 +6,25 @@
 <meta property='og:title' content='How Good are Foundation Models in Step-by-Step Embodied Reasoning?'/>
 <meta property='og:image' content=''/>
 <meta property='og:description' content=''/>
-<meta property='og:url' content='https://github.com/mbzuai-oryx/ALM-Bench'/>
+<meta property='og:url' content='https://github.com/mbzuai-oryx/FoMER-Bench'/>
 <meta property='og:image:width' content='1200' />
 <meta property='og:image:height' content='663' />
 <!-- TYPE BELOW IS PROBABLY: 'website' or 'article' or look on https://ogp.me/#types -->
 <meta property="og:type" content='website'/>
 <head>
   <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9VZKE74FPW"></script>
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-9VZKE74FPW"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
     gtag('config', 'G-9VZKE74FPW');
-</script>
+</script> -->
   <meta charset="utf-8">
   <meta name="description"
         content="How Good are Foundation Models in Step-by-Step Embodied Reasoning?">
-  <meta name="keywords" content="Multilingual Multimodal Benchmark, 100 languages, Cultural Multilingual Benchmark">
+  <meta name="keywords" content="Foundation Model Embodied Reasoning, FoMER benchmark, embodied reasoning benchmark, embodied AI">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>How Good are Foundation Models in Step-by-Step Embodied Reasoning?</title>
 
@@ -66,28 +66,25 @@
         <div class="column has-text-centered">
           <h1 class="title is-2 publication-title">How Good are Foundation Models in Step-by-Step Embodied Reasoning?</h1>
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><a href="https://dinuransika.github.io/">Dinura Dissanayake</a><sup>1♠</sup>,</span>
-            <span class="author-block"><a href="">Ahmed Heakl</a><sup>1♠</sup>,</span>
-            <span class="author-block"><a href="">Noor Ahsan</a><sup>1♠</sup>,</span>
-            <span class="author-block"><a href="">Jean Lahoud</a><sup>1</sup>,</span>
-            <span class="author-block"><a href="">Ketan More</a><sup>1</sup>,</span>
-            <span class="author-block"><a href="">Ritesh Thawkar </a><sup>1</sup>,</span>
-            <span class="author-block"><a href="">Omkar Thawakar</a><sup>1</sup>,</span>
-
-
-                
-            <!-- <br> -->
-              
+            <span class="author-block"><a href="https://dinuransika.github.io/">Dinura Dissanayake</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="https://scholar.google.com/citations?user=JcWO9OUAAAAJ&hl=en">Ahmed Heakl</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="https://scholar.google.com/citations?user=flvl5YQAAAAJ&hl=en">Omkar Thawakar</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="#">Noor Ahsan</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="https://scholar.google.com/citations?user=9-2AnjQAAAAJ&hl=en">Ritesh Thawkar</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="https://scholar.google.com/citations?user=FCgQeoYAAAAJ&hl=en">Ketan More</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="https://scholar.google.com/citations?user=LsivLPoAAAAJ&hl=en">Jean Lahoud</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="https://scholar.google.com/citations?hl=en&authuser=1&user=_KlvMVoAAAAJ">Rao Anwer</a><sup>1</sup>,</span>
             <span class="author-block"><a href="https://scholar.google.com/citations?hl=en&user=bZ3YBRcAAAAJ">Hisham Cholakkal</a><sup>1</sup>,</span>
             <span class="author-block"><a href="https://scholar.google.com/citations?user=-9ifK0cAAAAJ&hl=en&oi=ao">Ivan Laptev</a><sup>1</sup>,</span>
-            <span class="author-block"><a href="https://salman-h-khan.github.io/">Salman Khan</a><sup>1,2</sup>,</span>
-            <span class="author-block"><a href="https://sites.google.com/view/fahadkhans/home">Fahad Shahbaz Khan</a><sup>1,3</sup></span>
+            <span class="author-block"><a href="https://sites.google.com/view/fahadkhans/home">Fahad Khan</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="https://salman-h-khan.github.io/">Salman Khan</a><sup>1</sup>,</span>
+
 
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>♠</sup> Core Authors</span>
-            <br>
+            <!-- <span class="author-block"><sup>â™ </sup> Core Authors</span>
+            <br> -->
             <span class="author-block"><sup>1</sup>Mohamed bin Zayed University of AI,</span>
                 <br>
             <span class="author-block"><sup>2</sup>Australian National University,</span>
@@ -108,7 +105,7 @@
               </span>
                                 </span>
                 <span class="link-block">
-                  <a href="https://huggingface.co/datasets/MBZUAI/ALM-Bench" target="_blank"
+                  <a href="https://huggingface.co/datasets/Dinura/FoMER" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fas fa-database"></i>
@@ -117,7 +114,7 @@
                   </a>
                 </span>
               <span class="link-block">
-                <a href="https://github.com/mbzuai-oryx/ALM-Bench"
+                <a href="https://github.com/mbzuai-oryx/FoMER-Bench"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -126,7 +123,7 @@
                   </a>
               </span>
 
-              <span class="link-block">
+              <!-- <span class="link-block">
                 <a href="https://drive.google.com/file/d/1B2yynH-o1z1UvMCl32XoY3pVIkAxgN0P/view?usp=sharing"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -134,10 +131,10 @@
                   </span>
                   <span>Poster</span>
                 </a>
-              </span>
+              </span> -->
 
 
-              <span class="link-block">
+              <!-- <span class="link-block">
                 <a href="https://docs.google.com/presentation/d/10lUrfoC-R1lgl0Dx0EYpx1ID3AqLGnRO/edit?usp=sharing&ouid=103839181464334047856&rtpof=true&sd=true"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -145,9 +142,9 @@
                   </span>
                   <span>Presentation</span>
                 </a>
-              </span>
+              </span> -->
 
-              <span class="link-block">
+              <!-- <span class="link-block">
                 <a href="https://www.youtube.com/watch?v=fvcX4yi5AiY&list=PLtIMlmzwbtty7ie1quj1fq2QoTRK9eWHX&ab_channel=AshmalVayani"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -155,7 +152,7 @@
                   </span>
                   <span>Video</span>
                 </a>
-              </span>
+              </span> -->
 
 
               <span class="link-block">
@@ -181,12 +178,16 @@
   <div class="container is-max-desktop">
     <div class="hero-body">
         <p align="justify"> 
-        <b>How can AI-powered agents make safe and intelligent choices in the real world?</b> <br> Our research introduces a large-scale benchmark that tests whether today’s large multimodal models (LMMs) can truly reason about space, safety, and context when acting in complex environments. With over 1,000 carefully designed scenarios and a new evaluation framework, we reveal both the promise and the limitations of current models, pointing the way toward more reliable, reasoning-aware embodied AI.</p>
+        <b>How can AI-powered agents make safe and intelligent choices in the real world?</b> <br> Our research introduces a large-scale benchmark that tests whether todayâ€™s large multimodal models (LMMs) can truly reason about space, safety, and context when acting in complex environments. With over 1,000 carefully designed questions and a new evaluation framework, we reveal both the promise and the limitations of current models, pointing the way toward more reliable, reasoning-aware embodied AI.</p>
     <br>
-    <img src="./static/images/ReasoningTrailExample.jpg" >
-        <div class="content has-text-justified">
-            <p align="justify"> <b> <span>Figure</span></b>: The given sample shows an example where both the models, Gemini and Qwen, have given the correct answer as ”withdraw bolt”. Even though the answers are correct, the reasoning given for the answers is completely different. This emphasizes the need to
-evaluate the reasoning capabilities of the models.</p>
+        <div class="text-align:center;">
+            <img src="./static/images/ReasoningTrailExample.jpg" style="display:block;margin:0 auto;">
+            <p align="justify"> <b> <span>Figure</span></b>: Example illustrating the final answer and step-by-step
+            reasoning from Gemini and Qwen for a given
+            video and text prompt. While both models correctly identify the
+            action as â€œwithdraw bolt,â€ the reasoning they provide differs sig-
+            nificantly. This underscores the importance of evaluating the final
+            answer as well as the underlying reasoning.</p>
         </div>
     </div>
 
@@ -197,7 +198,7 @@ evaluate the reasoning capabilities of the models.</p>
       <h2 class="title is-3">Abstract</h2>
       <div class="content has-text-justified">
         <p>
-          Embodied agents operating in the physical world must make decisions that are not only effective but also safe, spatially coherent, and grounded in context. While recent advances in large multimodal models (LMMs) have shown promising capabilities in visual understanding and language generation, their ability to perform structured reasoning for real-world embodied tasks remains underexplored. In this work, we introduce a benchmark designed to evaluate the reasoning capabilities of LMMs in complex embodied decision-making scenarios. Our benchmark spans a diverse set of tasks that require agents to interpret multimodal observations, reason about physical constraints and safety, and generate valid next actions in natural language. We present (i) a large-scale, curated suite of embodied reasoning tasks, (ii) a novel evaluation framework that disentangles perceptual grounding from action reasoning, and (iii) empirical analysis of several leading LMMs under this setting. Our results highlight both the potential and current limitations of LMMs in embodied reasoning, pointing towards key challenges and opportunities for future research in robot intelligence.        </p>
+         Embodied agents operating in the physical world must make decisions that are not only effective but also safe, spatially coherent, and grounded in context. While recent advances in large multimodal models (LMMs) have shown promising capabilities in visual understanding and language generation, their ability to perform structured reasoning for real-world embodied tasks remains underexplored. In this work, we aim to understand how well foundation models can perform step-by-step reasoning in embodied environments. To this end, we propose the Foundation Model Embodied Reasoning (FoMER) benchmark, designed to evaluate the reasoning capabilities of LMMs in complex embodied decision-making scenarios. Our benchmark spans a diverse set of tasks that require agents to interpret multimodal observations, reason about physical constraints and safety, and generate valid next actions in natural language. We present (i) a large-scale, curated suite of embodied reasoning tasks, (ii) a novel evaluation framework that disentangles perceptual grounding from action reasoning, and (iii) empirical analysis of several leading LMMs under this setting. Our benchmark includes over 1.1k samples with detailed step-by-step reasoning across 10 tasks and 8 embodiments, covering three different robot types. Our results highlight both the potential and current limitations of LMMs in embodied reasoning, pointing towards key challenges and opportunities for future research in robot intelligence.  </p>
       </div>
     </div>
   </div>
@@ -212,7 +213,7 @@ evaluate the reasoning capabilities of the models.</p>
             <!-- </h4> -->
             
             <div class="content has-text-justified">
-                <p align="center"> <b> <span>Table</span></b>  A comparison of various Embodied and Physical AI benchmarks.</p>
+                <p align="center"> <b> <span>Table</span></b>  A comparison of various Embodied and Physical AI benchmarks. We summarize key features across benchmarks, including input modalities, question formats, presence of step-by-step reasoning trails, number of annotated questions, annotation methods, diversity of tasks and embodiments, and the types of robots involved. Our benchmark (last row) is distinguished by explicitly incorporating reasoning traces, supporting a variety of question types, and covering a broader set of tasks and robotic platforms compared to prior work.</p>
             </div>
         </div>
     </div>
@@ -281,7 +282,12 @@ evaluate the reasoning capabilities of the models.</p>
         <div class="content has-text-centered">
             <img src="./static/images/Fig3_Data_Distribution.jpg"  style="max-width:50%">
                                   <p class="content has-text-justified">
-            <b>Figure:</b> The figure illustrates both the dataset distribution and the question type composition of our benchmark. For clarity, we further decompose the Cosmos-R1 benchmark into its constituent sub-datasets – Agibot, BridgeDataV2, HoloAssist, RoboVQA, and RoboFail to explicitly show the distribution od question types across these subsets.</p>
+            <b>Figure:</b> Dataset distribution and question type composition of our
+benchmark. Question types include open-ended questions (Open),
+multiple choice questions (MCQ), and True/False questions (TF).
+For clarity, we decompose the Cosmos-R1 benchmark into its
+constituent sub-datasets Agibot, BridgeDataV2, HoloAssist, RoboVQA, and RoboFail to explicitly show the
+distribution of question types across these subsets.</p>
         </div>
         <div class="content has-text-justified">
                       <p>
@@ -318,27 +324,34 @@ evaluate the reasoning capabilities of the models.</p>
         <h2 class="title is-3 has-text-centered"> </h2>
           <br>
         <div class="content has-text-centered">
-            <img src="./static/images/Fig4_grouped_panels.jpg"  style="max-width:100%">
+            <img src="./static/images/Fig4_grouped_panels.png"  style="max-width:100%">
                                   <p class="content has-text-justified">
 
             <div class="content has-text-justified">
-            <p align="center"> <b> <span>Figure</span></b>: A comprehensive comparison of dataset-wise performances of the models. In our benchmark we have data from different sources, such as Cosmos-R1 benchmark, Roboset, NYU VINN, Recon, HRIBench and Pbench. For this graph we have decomposed Cosmos-R1 into its subsets, Agibot, BridgeDataV2, HoloAssist, RoboVQA, and Robofail.</p>
+            <p align="center"> <b> <span>Figure</span></b>: Comparison of reasoning accuracy (RA) and final accuracy (FA) across datasets of our benchmark, including Cosmos-R1
+(decomposed into Agibot, BridgeDataV2, HoloAssist, RoboVQA, and RoboFail), RoboSet, NYU VINN, Recon, HRIBench, and Pbench.</p>
             </div>
 <br><br><br><br><br><br>
         <div class="content has-text-justified">
             <h3 class="title is-4 has-text-justified"><b>Data Statistics</b></h3>
     
-            <p align="justify"> Our benchmark includes three different question types: multiple-choice (MCQ), true/false (TF), and open-ended. For MCQ and TF questions, models were provided with the visual context, question, and options, and were instructed to give an answer selected from the options along with a detailed step-by-step explanation that logically leads to the final answer. Open-ended questions were prompted with the visual context and question, and models were asked to provide a detailed explanation with the final answer. Since different models vary in their ability to handle visual frames, and most videos in our benchmark are short (1–10 seconds), we prompted all models with 8 uniformly sampled frames from each video. The only exception is the Robofail subset from Cosmos-R1, which includes longer videos (3–5 minutes); for these, we sampled 32 uniformly spaced frames. For datasets like NYU VINN, Recon, and Roboset that consist of static image frames, we used 8 sampled images. In the case of Pbench and HRIBench, which have only one image, models were prompted with that single image.</p>
+            <p align="justify"> Our benchmark includes three different question types: multiple-choice (MCQ), true/false (TF), and open-ended. For MCQ and TF questions, models were provided with the visual context, question, and options, and were instructed to give an answer selected from the options along with a detailed step-by-step explanation that logically leads to the final answer. Open-ended questions were prompted with the visual context and question, and models were asked to provide a detailed explanation with the final answer. Since different models vary in their ability to handle visual frames, and most videos in our benchmark are short (1â€“10 seconds), we prompted all models with 8 uniformly sampled frames from each video. The only exception is the Robofail subset from Cosmos-R1, which includes longer videos (3â€“5 minutes); for these, we sampled 32 uniformly spaced frames. For datasets like NYU VINN, Recon, and Roboset that consist of static image frames, we used 8 sampled images. In the case of Pbench and HRIBench, which have only one image, models were prompted with that single image.</p>
             <div class="content has-text-centered">
             <img src="./static/images/Fig5_QTypeWise.jpg" style="max-width:90%"> </div>
-            <p align="center"> <b> <span>Figure</span></b>: Comparison of the final accuracies achieved by different models in each question type of the benchmark. Considering the results, models perform better on TF questions and open-ended questions compared to MCQ questions</p>
+            <p align="center"> <b> <span>Figure</span></b>: Comparison of the final accuracies achieved by different
+models in each question type of the benchmark. Considering the
+results, models perform better on TF questions and open-ended
+questions compared to MCQ questions.</p>
         </div>
 
 <br><br><br>
         <div class="content has-text-justified">
             <div class="content has-text-centered">
-            <img src="./static/images/fig7_Embodied Results.jpg" style="max-width:100%"> </div>
-            <p align="center"> <b> <span>Figure</span></b>:  The above bar chart compares the performance of different open source as well as closed source SoTA models, highlighting the reasoning accuracy as well as the final accuracy. Here, we evaluate the reasoning steps thoroughly using our proposed evaluation criteria.</p>
+            <img src="./static/images/fig7_Embodied Results.png" style="max-width:100%"> </div>
+            <p align="center"> <b> <span>Figure</span></b>:  Performance of different open source as well as closed
+source SoTA models, highlighting the reasoning accuracy as well as
+the final accuracy. Here, we evaluate the reasoning steps thoroughly
+using our proposed evaluation criteria.</p>
         </div>
         </div>
           
@@ -359,10 +372,11 @@ evaluate the reasoning capabilities of the models.</p>
 
         <div class="content has-text-centered">
                       <p style="text-align: justify;">
-<p style="text-align: justify;"> Here we show a breakdown of the model performance on the proposed evaluation criteria, where we evaluate the reasoning
-traces of the models in physical AI-specific criteria like spatial reasoning, physical causality, commonsense, and safety </p>
+<p style="text-align: justify;">  breakdown of the model performance on the proposed
+evaluation criteria, where we evaluate the reasoning traces of the
+models in physical AI-specific criteria like spatial reasoning, physical causality, commonsense, and safety. </p>
 
-<img src="./static/images/Fig6_ReasoningRadar.jpg"  style="max-width:100%">
+<img src="./static/images/Fig6_ReasoningRadar.png"  style="max-width:100%">
 
     </div>
     <br/>
@@ -396,7 +410,7 @@ Qwen3-32B, and both models give similar evaluations in final accuracy as well as
         <h3 class="title is-4 has-text-justified">Conclusion</h3>
         <div class="content has-text-justified">
           <p>
-           In this paper, we introduced a novel embodied VQA benchmark designed to evaluate the embodied reasoning capabilities of LLMs. The benchmark consists of over 1,000 samples spanning 10 diverse task categories. In addition, we proposed a new evaluation framework that jointly assesses both action validity and reasoning correctness. We analyzed the performance of nine state-of-the-art models, including both open-source and proprietary systems. Our results reveal significant limitations of current models on embodied reasoning tasks and underscore the importance of analyzing and evaluating reasoning trails to better understand model capabilities.</p>
+           In this paper, we introduced the Foundation Model Embodied Reasoning (FoMER) benchmark designed to evaluate the embodied reasoning capabilities of LLMs. The benchmark consists of over 1,000 samples with detailed reasoning steps spanning 10 diverse task categories. In addition, we proposed a new evaluation framework that jointly assesses both action validity and reasoning correctness. We analyzed the performance of nine state-of-the-art models, including both open-source and proprietary systems. Our results reveal significant limitations of current models on embodied reasoning tasks and underscore the importance of analyzing and evaluating reasoning trails to better understand model capabilities. As a result, FoMER could serve as a testbed to identify potentially unsafe or unreliable reasoning in LLMs and agentic models before real-world deployment.
 
             <br>
             <p>For additional details about evaluation and experimental results, please refer to our main paper. Thank you! </p>
@@ -409,15 +423,7 @@ Qwen3-32B, and both models give similar evaluations in final accuracy as well as
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title"><a id="bibtex">BibTeX</a></h2>
-    <pre><code>@misc{vayani2024alm,
-      title={How Good are Foundation Models in Step-by-Step Embodied Reasoning?}, 
-      author={Dinura Dissanayake and Noor Ahsan and Ahmed Heakl and Jean Lahoud and Ketan More and Ritesh Thawkar and Omkar Thawakar and Ivan Laptev and Mubarak Shah and Salman Khan and Fahad Khan},
-      year={2025},
-      eprint={2411.16508},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2411.16508}, 
-}
+    <pre><code>@misc{}
 </code></pre>
   </div>
 </section>
