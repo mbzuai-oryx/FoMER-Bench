@@ -76,8 +76,8 @@
             <span class="author-block"><a href="https://scholar.google.com/citations?hl=en&authuser=1&user=_KlvMVoAAAAJ">Rao Anwer</a><sup>1</sup>,</span>
             <span class="author-block"><a href="https://scholar.google.com/citations?hl=en&user=bZ3YBRcAAAAJ">Hisham Cholakkal</a><sup>1</sup>,</span>
             <span class="author-block"><a href="https://scholar.google.com/citations?user=-9ifK0cAAAAJ&hl=en&oi=ao">Ivan Laptev</a><sup>1</sup>,</span>
-            <span class="author-block"><a href="https://sites.google.com/view/fahadkhans/home">Fahad Khan</a><sup>1</sup>,</span>
-            <span class="author-block"><a href="https://salman-h-khan.github.io/">Salman Khan</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="https://sites.google.com/view/fahadkhans/home">Fahad Khan</a><sup>1, 3</sup>,</span>
+            <span class="author-block"><a href="https://salman-h-khan.github.io/">Salman Khan</a><sup>1, 2</sup>,</span>
 
 
           </div>
@@ -198,7 +198,7 @@
       <h2 class="title is-3">Abstract</h2>
       <div class="content has-text-justified">
         <p>
-         Embodied agents operating in the physical world must make decisions that are not only effective but also safe, spatially coherent, and grounded in context. While recent advances in large multimodal models (LMMs) have shown promising capabilities in visual understanding and language generation, their ability to perform structured reasoning for real-world embodied tasks remains underexplored. In this work, we aim to understand how well foundation models can perform step-by-step reasoning in embodied environments. To this end, we propose the Foundation Model Embodied Reasoning (FoMER) benchmark, designed to evaluate the reasoning capabilities of LMMs in complex embodied decision-making scenarios. Our benchmark spans a diverse set of tasks that require agents to interpret multimodal observations, reason about physical constraints and safety, and generate valid next actions in natural language. We present (i) a large-scale, curated suite of embodied reasoning tasks, (ii) a novel evaluation framework that disentangles perceptual grounding from action reasoning, and (iii) empirical analysis of several leading LMMs under this setting. Our benchmark includes over 1.1k samples with detailed step-by-step reasoning across 10 tasks and 8 embodiments, covering three different robot types. Our results highlight both the potential and current limitations of LMMs in embodied reasoning, pointing towards key challenges and opportunities for future research in robot intelligence.  </p>
+         Embodied agents operating in the physical world must make decisions that are not only effective but also safe, spatially coherent, and grounded in context. While recent advances in large multimodal models (LMMs) have shown promising capabilities in visual understanding and language generation, their ability to perform structured reasoning for real-world embodied tasks remains underexplored. In this work, we aim to understand how well foundation models can perform step-by-step reasoning in embodied environments. To this end, we propose <b>the Foundation Model Embodied Reasoning (FoMER)</b> benchmark, designed to evaluate the reasoning capabilities of LMMs in complex embodied decision-making scenarios. Our benchmark spans a diverse set of tasks that require agents to interpret multimodal observations, reason about physical constraints and safety, and generate valid next actions in natural language. We present (i) a large-scale, curated suite of embodied reasoning tasks, (ii) a novel evaluation framework that disentangles perceptual grounding from action reasoning, and (iii) empirical analysis of several leading LMMs under this setting. Our benchmark includes over 1.1k samples with detailed step-by-step reasoning across 10 tasks and 8 embodiments, covering three different robot types. Our results highlight both the potential and current limitations of LMMs in embodied reasoning, pointing towards key challenges and opportunities for future research in robot intelligence.  </p>
       </div>
     </div>
   </div>
@@ -251,7 +251,7 @@
         <h2 class="title is-3"> </h2>
         <div class="content has-text-justified">
           <p>
-          <h5> <b> Benchmark Curation: Building the Embodied Bench</b></h5>
+          <h5> <b> Benchmark Curation: Building the FoMER-Bench</b></h5>
            <p>The Embodied Bench is designed to evaluate reasoning in physical AI scenarios. It covers multiple robot types and modalities, allowing assessment of capabilities across tasks such as <b>Next-Action prediction, Action affordance, Physical common sense, Temporal reasoning, Tool use and manipulation, Risk assessment, and Robot Navigation</b></p>
            <ul>
              <li> <b>Benchmark Assembly </b> To capture the full scope of physical reasoning, this benchmark was curated from multiple existing datasets. Some datasets (e.g., Cosmos-R1, Pbench) already contained QA pairs, while others required generation of QA pairs and reasoning trails through a semi-automated pipeline. For datasets with existing QA pairs, reasoning trails were added to link each answer to logical, step-by-step explanations.</li>
@@ -277,7 +277,7 @@
     <!-- Latent space editing applications -->
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3 has-text-centered">Benchmark Datasets Overview</h2>
+        <h2 class="title is-3 has-text-centered">FoMER-Bench Overview</h2>
         
         <div class="content has-text-centered">
             <img src="./static/images/Fig3_Data_Distribution.jpg"  style="max-width:50%">
@@ -410,7 +410,7 @@ Qwen3-32B, and both models give similar evaluations in final accuracy as well as
         <h3 class="title is-4 has-text-justified">Conclusion</h3>
         <div class="content has-text-justified">
           <p>
-           In this paper, we introduced the Foundation Model Embodied Reasoning (FoMER) benchmark designed to evaluate the embodied reasoning capabilities of LLMs. The benchmark consists of over 1,000 samples with detailed reasoning steps spanning 10 diverse task categories. In addition, we proposed a new evaluation framework that jointly assesses both action validity and reasoning correctness. We analyzed the performance of nine state-of-the-art models, including both open-source and proprietary systems. Our results reveal significant limitations of current models on embodied reasoning tasks and underscore the importance of analyzing and evaluating reasoning trails to better understand model capabilities. As a result, FoMER could serve as a testbed to identify potentially unsafe or unreliable reasoning in LLMs and agentic models before real-world deployment.
+           In this paper, we introduced <b>the Foundation Model Embodied Reasoning (FoMER)</b> benchmark designed to evaluate the embodied reasoning capabilities of LLMs. The benchmark consists of over 1,000 samples with detailed reasoning steps spanning 10 diverse task categories. In addition, we proposed a new evaluation framework that jointly assesses both action validity and reasoning correctness. We analyzed the performance of nine state-of-the-art models, including both open-source and proprietary systems. Our results reveal significant limitations of current models on embodied reasoning tasks and underscore the importance of analyzing and evaluating reasoning trails to better understand model capabilities. As a result, FoMER could serve as a testbed to identify potentially unsafe or unreliable reasoning in LLMs and agentic models before real-world deployment.
 
             <br>
             <p>For additional details about evaluation and experimental results, please refer to our main paper. Thank you! </p>
