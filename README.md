@@ -34,6 +34,13 @@ Performance of different open source as well as closed source SoTA models, highl
 **BibTeX:**
 
 ```bibtex
-@misc{
+@misc{dissanayake2025goodfoundationmodelsstepbystep,
+      title={How Good are Foundation Models in Step-by-Step Embodied Reasoning?}, 
+      author={Dinura Dissanayake and Ahmed Heakl and Omkar Thawakar and Noor Ahsan and Ritesh Thawkar and Ketan More and Jean Lahoud and Rao Anwer and Hisham Cholakkal and Ivan Laptev and Fahad Shahbaz Khan and Salman Khan},
+      year={2025},
+      eprint={2509.15293},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2509.15293}, 
 }
 ```
